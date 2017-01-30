@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9982FB6C-BEAC-4DC9-96C6-2A301717537A}</ProjectGuid>
+    <ProjectGuid>{31277904-F049-450B-9941-C5F9C1866002}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzz.Tests</RootNamespace>
-    <AssemblyName>FizzBuzz.Tests</AssemblyName>
+    <RootNamespace>AddStringNumbers.Tests</RootNamespace>
+    <AssemblyName>AddStringNumbers.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,17 +54,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="FizzBuzzerTests.cs" />
+    <Compile Include="CalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\AddStringNumbers\AddStringNumbers.csproj">
+      <Project>{bb4d34f2-7ddf-4a4a-beca-11dda1e976d5}</Project>
+      <Name>AddStringNumbers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj">
-      <Project>{8889ec4b-b5ff-47e4-9a4f-c86d3ad17257}</Project>
-      <Name>FizzBuzz</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
