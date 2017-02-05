@@ -1,14 +1,25 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using System;
 
 namespace AddStringNumbers.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class CalculatorTests
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Test]
+        public void AddOneTwo_ReturnsThree()
         {
+            var calculator = new Calculator();
+            int result = calculator.Add(1, 2);
+            Assert.AreEqual(3, result);
+        }
+
+        [Test]
+        public void AddSevenOne_ReturnsEight()
+        {
+            var calculator = new Calculator();
+            int result = calculator.Add(7, 1);
+            Assert.AreEqual(8, result);
         }
     }
 }
