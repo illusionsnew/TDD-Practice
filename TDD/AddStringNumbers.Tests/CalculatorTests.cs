@@ -21,5 +21,13 @@ namespace AddStringNumbers.Tests
             int result = calculator.Add(7, 1);
             Assert.AreEqual(8, result);
         }
+
+        [Test]
+        public void Validate_Name()
+        {
+            var name = new NameValidator();
+            string result = name.Verify("Sajith");
+            Assert.AreSame("Sajith", result);
+        }
     }
 }
